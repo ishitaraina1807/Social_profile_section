@@ -14,7 +14,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+main{
+    max-width: 70rem;
+    margin: 1rem;
+}
 body {
+    /* display: grid; */
+    /* place-items: center; */
     background: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
     background-position: left top, right bottom;
@@ -25,7 +31,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 100%;
-    
+    gap: 2rem;
 }
 .info{
     text-align: start;
@@ -37,6 +43,7 @@ h1{
     font-weight: 700;
     font-size: 3.5rem;
     margin-right: 10rem;
+    line-height: 3.2rem;
 }
 .para{
         font-size: 1.2rem;
@@ -44,53 +51,64 @@ h1{
         line-height: 1.3;
         color: var(--dgm);
         margin-top: 1.5rem;
-        margin-right: 6rem;
+        max-width: 30rem;
 }
 .ratings{
     margin-top: 1.5rem;
-   
+    /* display: grid;
+    grid-template-columns: 2rem 2rem 1fr 2rem 2rem;
+    grid-template-areas: "child1 child1 child1 . ." ". child2 child2 child2 ." ". . child3 child3 child3";
+    padding: 1rem; */
 }
 .rating__row{
     display: flex;
     align-items: center;
-    width: 440px;
+    max-width: 440px;
     border-radius: .5rem;
     padding: 1.2rem;
     background-color: var(--lgm);
     text-align: center;
+}
+.rating__row:first-child{
+    grid-area: child1;
 }
 .rating__row:not(:first-child) {
     margin-top: 1.1rem;
 }
 .rating__row:nth-child(2) {
     margin-left: 2.8rem;
+    grid-area: child2;
 }
 
 .rating__row:nth-child(3) {
     margin-left: 5.6rem;
+    grid-area: child3;
 }
 .rating__row__stars {
     margin: 0 1.3rem;
     margin-right: 2rem;
+    display: flex;
 }
 .rating__row__text {
     margin-top: 0;
     font-family: 'League Spartan', sans-serif; 
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--magenta);
 }
 .card_columns{
     margin-top: 4rem;
     display: flex;
     flex-direction: row; 
+    margin-block: 4rem;
+    gap: 1.5rem;
 }
 .card{
     font-family:'League Spartan', sans-serif;  
     background-color: var(--magenta);
-    margin-right: 1.8rem ;
+    
     max-width: 24vw;
-    height: 15vw;
+    height: auto;
     border-radius: 3%;
     padding: 2rem;
 }
@@ -117,10 +135,13 @@ h3{
 .user_review{
     color: white;
     line-height: 1.5rem;
+    font-size: 0.9rem;
 }
 .card:nth-child(2) {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    transform: translateY(1.5rem);
 }
 .card:nth-child(3) {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    transform: translateY(3rem);
 }
