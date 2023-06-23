@@ -42,8 +42,8 @@ h1{
     color: var(--magenta);
     font-weight: 700;
     font-size: 3.5rem;
-    margin-right: 10rem;
-    line-height: 3.2rem;
+    max-width: 25rem;
+    /* line-height: 3.2rem; */
 }
 .para{
         font-size: 1.2rem;
@@ -106,8 +106,6 @@ h1{
 .card{
     font-family:'League Spartan', sans-serif;  
     background-color: var(--magenta);
-    
-    max-width: 24vw;
     height: auto;
     border-radius: 3%;
     padding: 2rem;
@@ -144,4 +142,35 @@ h3{
 .card:nth-child(3) {
     /* margin-top: 2rem; */
     transform: translateY(3rem);
+}
+@media screen and (max-width: 600px) {
+    body{
+        padding: 15vw 7vw;
+    }
+    .content{
+        display: block;
+    }
+    h1{
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    .para{
+        text-align: center;
+    }
+    .rating__row{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .rating__row:nth-child(2) {
+        margin-left: 0;
+    }
+    .rating__row:nth-child(3) {
+        margin-left: 0;
+    }
+    .card_columns{
+        display: flex;
+        flex-direction: column;
+    }
+   
 }
