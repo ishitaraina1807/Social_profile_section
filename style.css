@@ -88,6 +88,7 @@ h1{
     margin: 0 1.3rem;
     margin-right: 2rem;
     display: flex;
+    gap: 0.6rem;
 }
 .rating__row__text {
     margin-top: 0;
@@ -134,6 +135,7 @@ h3{
     color: white;
     line-height: 1.5rem;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 .card:nth-child(2) {
     /* margin-top: 1rem; */
