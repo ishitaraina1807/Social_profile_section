@@ -108,7 +108,7 @@ h1{
     font-family:'League Spartan', sans-serif;  
     background-color: var(--magenta);
     height: auto;
-    border-radius: 3%;
+    border-radius: 4%;
     padding: 2rem;
 }
 .cardinfo{
